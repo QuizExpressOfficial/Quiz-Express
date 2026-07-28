@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Express</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* शुरुआत में वेलकम स्क्रीन दिखेगी */
+        #welcome-section {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 50px 30px;
+            width: 100%;
+            max-width: 500px;
+            box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.5);
+        }
+
+        #welcome-section h1 {
+            font-size: 34px;
+            color: #00ffcc;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        #welcome-section p {
+            font-size: 18px;
+            color: #e0e0e0;
+            margin-bottom: 30px;
+        }
+
+        .start-btn {
+            background: linear-gradient(135deg, #ff4b12, #ffc107);
+            color: #000;
+            border: none;
+            padding: 16px 35px;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            text-transform: uppercase;
+            box-shadow: 0 6px 20px rgba(255, 75, 18, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        .start-btn:hover {
+            transform: translateY(-3px);
+            background: linear-gradient(135deg, #ffc107, #ff4b12);
+        }
+
+        /* क्विज़ सेक्शन शुरू में छुपा रहेगा */
+        #quiz-section {
+            display: none;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            width: 100%;
+            max-width: 600px;
+            box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.5);
+        }
+
+        .question-box {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #ffc107;
+            font-weight: bold;
+        }
+
+        .option-btn {
+            display: block;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.15);
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 12px 20px;
+            margin-bottom: 12px;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: left;
+            transition: background 0.2s;
+        }
+
+        .option-btn:hover {
+            background: rgba(0, 255, 204, 0.3);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. वेलकम पेज वाला हिस्सा -->
+    <div id="welcome-section">
+        <h1>All Cricket Fans Welcome To This Site</h1>
+        <p>अपनी क्रिकेट नॉलेज टेस्ट करने के लिए तैयार हो जाइए!</p>
+        <button class="start-btn" onclick="startQuiz()">Join Quiz Now</button>
+    </div>
+
+    <!-- 2. क्विज़ वाला हिस्सा (शुरुआत में छुपा हुआ) -->
+    <div id="quiz-section">
+        <div class="question-box">प्रश्नों की श्रृंखला जल्द यहाँ लोड होगी...</div>
+        <!-- यहाँ आपके क्विज़ के ऑप्शंस आएंगे -->
+        <button class="option-btn">विकल्प A</button>
+        <button class="option-btn">विकल्प B</button>
+        <button class="option-btn">विकल्प C</button>
+        <button class="option-btn">विकल्प D</button>
+    </div>
+
+    <script>
+        // यह फंक्शन बटन दबाने पर वेलकम पेज छुपा देगा और क्विज़ दिखा देगा
+        function startQuiz() {
+            document.getElementById('welcome-section').style.display = 'none';
+            document.getElementById('quiz-section').style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
