@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Express - क्रिकेट के दीवानों के लिए</title>
+    <style>
+        /* बेसिक स्टाइलिंग */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* क्रिकेट थीम जैसा गहरा बैकग्राउंड */
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* मेन बॉक्स का डिज़ाइन */
+        .welcome-container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 50px 30px;
+            width: 100%;
+            max-width: 500px;
+            box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.5);
+        }
+
+        /* वेलकम मैसेज की स्टाइल */
+        .welcome-container h1 {
+            font-size: 36px;
+            color: #00ffcc; /* चमकदार हरा रंग */
+            margin-bottom: 20px;
+            line-height: 1.2;
+            text-shadow: 0 3px 5px rgba(0,0,0,0.4);
+        }
+
+        .welcome-container p {
+            font-size: 18px;
+            color: #e0e0e0;
+            margin-bottom: 40px;
+        }
+
+        /* 'Join Quiz Now' बटन का डिज़ाइन */
+        .start-btn {
+            background: linear-gradient(135deg, #ff4b12, #ffc107); /* ऑरेंज और यलो का कॉम्बिनेशन */
+            color: #000;
+            border: none;
+            padding: 18px 40px;
+            font-size: 22px;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 6px 20px rgba(255, 75, 18, 0.5);
+            transition: all 0.3s ease;
+            text-decoration: none; /* लिंक के लिए जरूरी */
+            display: inline-block;
+        }
+
+        .start-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(255, 75, 18, 0.7);
+            background: linear-gradient(135deg, #ffc107, #ff4b12); /* हवर करने पर रंग बदल जाएगा */
+        }
+
+        /* मोबाइल के लिए रिस्पॉन्सिव डिज़ाइन */
+        @media (max-width: 480px) {
+            .welcome-container h1 {
+                font-size: 28px;
+            }
+            .start-btn {
+                padding: 15px 30px;
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="welcome-container">
+        <h1>All Cricket Fans Welcome To This Site</h1>
+        <p>क्या आप अपनी क्रिकेट नॉलेज टेस्ट करने के लिए तैयार हैं?</p>
+        
+        <!-- यह बटन आपको क्विज़ वाले पेज पर ले जाएगा -->
+        <!-- अगर आप एक ही फाइल में सब रख रहे हैं, तो href में #quiz-section लिखें और JS का यूज़ करें -->
+        <a href="interface.html" class="start-btn">Join Quiz Now</a>
+    </div>
+
+</body>
+</html>
